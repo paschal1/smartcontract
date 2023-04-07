@@ -56,7 +56,7 @@
                             <ul class="partner-list flex-lg-nowrap mb-0 animated" data-animate="fadeInUp" data-delay=".1">
                                 <span class="" ><i class="fa-solid fa-dollar-sign bg-dark" style="color: aliceblue; padding:10px; margin-right:2px; border:solid;"></i></span>
                                 <div>
-                                <p>@if ($tran) ${{$transact->amount}} @else $0.00 @endif
+                                <p>@if ($transact->email !== Auth::user()->email )   $0.00 @else ${{$transact->amount}}@endif
                                 <br/> Account Balance
                                 </p>
                                  <hr>
